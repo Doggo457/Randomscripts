@@ -2,7 +2,7 @@ import random
 
 def main():
     while True:
-        random_number = random.randint(1, 100)
+        random_number = random.randint(1, 10)
         print("I'm thinking of a number between 1 and 100...")
         print("You have 10 attempts to guess it!")
         attempt = 0
