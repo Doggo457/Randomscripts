@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Define the root element -->
+  <xs:element name="CityTransportSystem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Buses" type="BusesType"/>
+        <xs:element name="Routes" type="RoutesType"/>
+        <xs:element name="Drivers" type="DriversType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Define Buses section -->
+  <xs:complexType name="BusesType">
+    <xs:sequence>
+      <xs:element name="Bus" type="BusType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Define Bus type -->
+  <xs:complexType name="BusType">
+    <xs:sequence>
+      <xs:element name="Route" type="xs:string"/>
+      <xs:element name="Driver" type="BusDriverType"/>
+      <xs:element name="Capacity" type="xs:positiveInteger"/>
+      <xs:element name="OperationalSince" type="xs:gYear"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:ID" use="required"/>
+  </xs:complexType>
+
+  <!-- Define BusDriver type (different from main Driver type) -->
+  <xs:complexType name="BusDriverType">
+    <xs:sequence>
+      <xs:element name="Name" type="xs:string"/>
+      <xs:element name="EmployeeID" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Define Routes section -->
+  <xs:complexType name="RoutesType">
+    <xs:sequence>
+      <xs:element name="Route" type="RouteType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Define Route type -->
+  <xs:complexType name="RouteType">
+    <xs:sequence>
+      <xs:element name="StartPoint" type="xs:string"/>
+      <xs:element name="EndPoint" type="xs:string"/>
+      <xs:element name="Stops" type="StopsType"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <!-- Define Stops type -->
+  <xs:complexType name="StopsType">
+    <xs:sequence>
+      <xs:element name="Stop" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Define Drivers section -->
+  <xs:complexType name="DriversType">
+    <xs:sequence>
+      <xs:element name="Driver" type="DriverType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Define Driver type -->
+  <xs:complexType name="DriverType">
+    <xs:sequence>
+      <xs:element name="Name" type="xs:string"/>
+      <xs:element name="LicenceNumber" type="xs:string"/>
+      <xs:element name="YearsOfExperience" type="xs:positiveInteger"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:ID" use="required"/>
+  </xs:complexType>
+
+</xs:schema>

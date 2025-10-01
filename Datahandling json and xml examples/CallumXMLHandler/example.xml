@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HistoricalArchive>
+  <Artefacts>
+    <Artefact id="A001">
+      <Name>Rosetta Stone</Name>
+      <Description>An inscribed stone slab that provided the key to deciphering Egyptian hieroglyphs.</Description>
+      <Type>Archaeological Artefact</Type>
+      <DateOfCreation>196 BCE</DateOfCreation>
+    </Artefact>
+    <Artefact id="A002">
+      <Name>Declaration of Independence</Name>
+      <Description>The document announcing the separation of the thirteen American colonies from Great Britain.</Description>
+      <Type>Historical Document</Type>
+      <DateOfCreation>1776 CE</DateOfCreation>
+    </Artefact>
+    <Artefact id="A003">
+      <Name>First Printing Press</Name>
+      <Description>Mechanical device for applying pressure to an inked surface resting upon a print medium, invented by Johannes Gutenberg.</Description>
+      <Type>Technological Invention</Type>
+      <DateOfCreation>1440 CE</DateOfCreation>
+    </Artefact>
+  </Artefacts>
+  
+  <HistoricalEvents>
+    <Event id="E001">
+      <Name>Discovery of the Rosetta Stone</Name>
+      <Date>1799 CE</Date>
+      <Location>Rashid (Rosetta), Egypt</Location>
+      <Connections>
+        <ArtefactRefs>
+          <ArtefactRef id="A001" relationship="discovered"/>
+        </ArtefactRefs>
+        <IndividualRefs>
+          <IndividualRef id="I001" relationship="discoverer"/>
+        </IndividualRefs>
+        <EventRefs>
+          <EventRef id="E003" relationship="during"/>
+        </EventRefs>
+      </Connections>
+    </Event>
+    <Event id="E002">
+      <Name>Signing of the Declaration of Independence</Name>
+      <Date>July 4, 1776 CE</Date>
+      <Location>Philadelphia, Pennsylvania</Location>
+      <Connections>
+        <ArtefactRefs>
+          <ArtefactRef id="A002" relationship="created"/>
+        </ArtefactRefs>
+        <IndividualRefs>
+          <IndividualRef id="I002" relationship="signer"/>
+          <IndividualRef id="I003" relationship="author"/>
+        </IndividualRefs>
+      </Connections>
+    </Event>
+    <Event id="E003">
+      <Name>Napoleon's Campaign in Egypt</Name>
+      <Date>1798-1801 CE</Date>
+      <Location>Egypt</Location>
+      <Connections>
+        <IndividualRefs>
+          <IndividualRef id="I001" relationship="participant"/>
+          <IndividualRef id="I004" relationship="commander"/>
+        </IndividualRefs>
+        <EventRefs>
+          <EventRef id="E001" relationship="encompassed"/>
+        </EventRefs>
+      </Connections>
+    </Event>
+  </HistoricalEvents>
+  
+  <HistoricalIndividuals>
+    <Individual id="I001">
+      <Name>Pierre-François Bouchard</Name>
+      <Lifespan>1771–1822</Lifespan>
+      <Role>French officer who discovered the Rosetta Stone</Role>
+      <Connections>
+        <ArtefactRefs>
+          <ArtefactRef id="A001" relationship="discoverer"/>
+        </ArtefactRefs>
+        <EventRefs>
+          <EventRef id="E001" relationship="key_participant"/>
+          <EventRef id="E003" relationship="participant"/>
+        </EventRefs>
+        <IndividualRefs>
+          <IndividualRef id="I004" relationship="subordinate"/>
+        </IndividualRefs>
+      </Connections>
+    </Individual>
+    <Individual id="I002">
+      <Name>John Adams</Name>
+      <Lifespan>1735-1826</Lifespan>
+      <Role>Founding Father and second President of the United States</Role>
+      <Connections>
+        <ArtefactRefs>
+          <ArtefactRef id="A002" relationship="signer"/>
+        </ArtefactRefs>
+        <EventRefs>
+          <EventRef id="E002" relationship="participant"/>
+        </EventRefs>
+        <IndividualRefs>
+          <IndividualRef id="I003" relationship="colleague"/>
+        </IndividualRefs>
+      </Connections>
+    </Individual>
+    <Individual id="I003">
+      <Name>Thomas Jefferson</Name>
+      <Lifespan>1743-1826</Lifespan>
+      <Role>Founding Father and third President of the United States</Role>
+      <Connections>
+        <ArtefactRefs>
+          <ArtefactRef id="A002" relationship="author"/>
+        </ArtefactRefs>
+        <EventRefs>
+          <EventRef id="E002" relationship="key_participant"/>
+        </EventRefs>
+        <IndividualRefs>
+          <IndividualRef id="I002" relationship="colleague"/>
+        </IndividualRefs>
+      </Connections>
+    </Individual>
+    <Individual id="I004">
+      <Name>Napoleon Bonaparte</Name>
+      <Lifespan>1769-1821</Lifespan>
+      <Role>French military leader and emperor</Role>
+      <Connections>
+        <EventRefs>
+          <EventRef id="E003" relationship="commander"/>
+        </EventRefs>
+        <IndividualRefs>
+          <IndividualRef id="I001" relationship="commander"/>
+        </IndividualRefs>
+      </Connections>
+    </Individual>
+    <Individual id="I005">
+      <Name>Johannes Gutenberg</Name>
+      <Lifespan>1400-1468</Lifespan>
+      <Role>Inventor of the movable type printing press</Role>
+      <Connections>
+        <ArtefactRefs>
+          <ArtefactRef id="A003" relationship="inventor"/>
+        </ArtefactRefs>
+      </Connections>
+    </Individual>
+  </HistoricalIndividuals>
+</HistoricalArchive>

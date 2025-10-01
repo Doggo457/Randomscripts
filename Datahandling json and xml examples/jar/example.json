@@ -1,0 +1,221 @@
+{
+    "HistoricalArchive": {
+      "Artefacts": [
+        {
+          "id": "A001",
+          "Name": "Rosetta Stone",
+          "Description": "An inscribed stone slab that provided the key to deciphering Egyptian hieroglyphs.",
+          "Type": "Archaeological Artefact",
+          "DateOfCreation": "196 BCE"
+        },
+        {
+          "id": "A002",
+          "Name": "Declaration of Independence",
+          "Description": "The document announcing the separation of the thirteen American colonies from Great Britain.",
+          "Type": "Historical Document",
+          "DateOfCreation": "1776 CE"
+        },
+        {
+          "id": "A003",
+          "Name": "First Printing Press",
+          "Description": "Mechanical device for applying pressure to an inked surface resting upon a print medium, invented by Johannes Gutenberg.",
+          "Type": "Technological Invention",
+          "DateOfCreation": "1440 CE"
+        }
+      ],
+      "HistoricalEvents": [
+        {
+          "id": "E001",
+          "Name": "Discovery of the Rosetta Stone",
+          "Date": "1799 CE",
+          "Location": "Rashid (Rosetta), Egypt",
+          "Connections": {
+            "ArtefactRefs": [
+              {
+                "id": "A001",
+                "relationship": "discovered"
+              }
+            ],
+            "IndividualRefs": [
+              {
+                "id": "I001",
+                "relationship": "discoverer"
+              }
+            ],
+            "EventRefs": [
+              {
+                "id": "E003",
+                "relationship": "during"
+              }
+            ]
+          }
+        },
+        {
+          "id": "E002",
+          "Name": "Signing of the Declaration of Independence",
+          "Date": "July 4, 1776 CE",
+          "Location": "Philadelphia, Pennsylvania",
+          "Connections": {
+            "ArtefactRefs": [
+              {
+                "id": "A002",
+                "relationship": "created"
+              }
+            ],
+            "IndividualRefs": [
+              {
+                "id": "I002",
+                "relationship": "signer"
+              },
+              {
+                "id": "I003",
+                "relationship": "author"
+              }
+            ]
+          }
+        },
+        {
+          "id": "E003",
+          "Name": "Napoleon's Campaign in Egypt",
+          "Date": "1798-1801 CE",
+          "Location": "Egypt",
+          "Connections": {
+            "IndividualRefs": [
+              {
+                "id": "I001",
+                "relationship": "participant"
+              },
+              {
+                "id": "I004",
+                "relationship": "commander"
+              }
+            ],
+            "EventRefs": [
+              {
+                "id": "E001",
+                "relationship": "encompassed"
+              }
+            ]
+          }
+        }
+      ],
+      "HistoricalIndividuals": [
+        {
+          "id": "I001",
+          "Name": "Pierre-François Bouchard",
+          "Lifespan": "1771–1822",
+          "Role": "French officer who discovered the Rosetta Stone",
+          "Connections": {
+            "ArtefactRefs": [
+              {
+                "id": "A001",
+                "relationship": "discoverer"
+              }
+            ],
+            "EventRefs": [
+              {
+                "id": "E001",
+                "relationship": "key_participant"
+              },
+              {
+                "id": "E003",
+                "relationship": "participant"
+              }
+            ],
+            "IndividualRefs": [
+              {
+                "id": "I004",
+                "relationship": "subordinate"
+              }
+            ]
+          }
+        },
+        {
+          "id": "I002",
+          "Name": "John Adams",
+          "Lifespan": "1735-1826",
+          "Role": "Founding Father and second President of the United States",
+          "Connections": {
+            "ArtefactRefs": [
+              {
+                "id": "A002",
+                "relationship": "signer"
+              }
+            ],
+            "EventRefs": [
+              {
+                "id": "E002",
+                "relationship": "participant"
+              }
+            ],
+            "IndividualRefs": [
+              {
+                "id": "I003",
+                "relationship": "colleague"
+              }
+            ]
+          }
+        },
+        {
+          "id": "I003",
+          "Name": "Thomas Jefferson",
+          "Lifespan": "1743-1826",
+          "Role": "Founding Father and third President of the United States",
+          "Connections": {
+            "ArtefactRefs": [
+              {
+                "id": "A002",
+                "relationship": "author"
+              }
+            ],
+            "EventRefs": [
+              {
+                "id": "E002",
+                "relationship": "key_participant"
+              }
+            ],
+            "IndividualRefs": [
+              {
+                "id": "I002",
+                "relationship": "colleague"
+              }
+            ]
+          }
+        },
+        {
+          "id": "I004",
+          "Name": "Napoleon Bonaparte",
+          "Lifespan": "1769-1821",
+          "Role": "French military leader and emperor",
+          "Connections": {
+            "EventRefs": [
+              {
+                "id": "E003",
+                "relationship": "commander"
+              }
+            ],
+            "IndividualRefs": [
+              {
+                "id": "I001",
+                "relationship": "commander"
+              }
+            ]
+          }
+        },
+        {
+          "id": "I005",
+          "Name": "Johannes Gutenberg",
+          "Lifespan": "1400-1468",
+          "Role": "Inventor of the movable type printing press",
+          "Connections": {
+            "ArtefactRefs": [
+              {
+                "id": "A003",
+                "relationship": "inventor"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
